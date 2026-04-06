@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>КитепДүкөн — Китептер дүйнөсү</title>
+  <title>NURS — Китептер дүйнөсү</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -97,6 +97,7 @@
     }
 
     .logo-wrap svg { width: 44px; height: 44px; }
+    .logo-wrap img { width: 64px; height: 64px; object-fit: contain; border-radius: 50%; }
 
     .shop-name {
       font-family: 'Playfair Display', serif;
@@ -348,17 +349,9 @@
   <!-- HEADER -->
   <header class="header">
     <div class="logo-wrap">
-      <!-- Book icon -->
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="8" y="6" width="22" height="30" rx="3" fill="#c9a84c" opacity="0.15"/>
-        <rect x="10" y="8" width="22" height="30" rx="3" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
-        <line x1="10" y1="8" x2="10" y2="38" stroke="#c9a84c" stroke-width="3" stroke-linecap="round"/>
-        <line x1="15" y1="16" x2="28" y2="16" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
-        <line x1="15" y1="21" x2="26" y2="21" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" opacity="0.5"/>
-        <line x1="15" y1="26" x2="24" y2="26" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" opacity="0.35"/>
-      </svg>
+      <img src="nur.png" alt="NURS логотипи" />
     </div>
-    <h1 class="shop-name">Китеп<em>Дүкөн</em></h1>
+    <h1 class="shop-name">NURS</h1>
     <p class="tagline">Китептер дүйнөсүнө кош келиңиз</p>
     <div class="divider">
       <span></span><i>✦</i><span></span>
@@ -368,107 +361,81 @@
   <!-- MAIN LINKS -->
   <div class="links">
 
-    <p class="section-label">Дүкөн</p>
+    <p class="section-label">Веб сайтыбыз</p>
 
-    <a href="#" class="link-card featured">
+    <a href="https://www.nurs.kg/" class="link-card featured" target="_blank" rel="noopener">
       <div class="card-icon">🛒</div>
       <div class="card-body">
         <span class="card-label">Онлайн дүкөн</span>
-        <span class="card-sub">Бардык китептер — бир жерде</span>
+        <span class="card-sub">nurs.kg — бардык китептер бир жерде</span>
       </div>
       <span class="badge">Жаңы</span>
       <span class="card-arrow">→</span>
     </a>
 
-    <a href="#" class="link-card">
-      <div class="card-icon">📚</div>
-      <div class="card-body">
-        <span class="card-label">Каталог</span>
-        <span class="card-sub">Жанр боюнча издөө</span>
-      </div>
-      <span class="card-arrow">→</span>
-    </a>
+    <p class="section-label">Байланышуу</p>
 
-    <a href="#" class="link-card">
-      <div class="card-icon">🔥</div>
-      <div class="card-body">
-        <span class="card-label">Акциялар</span>
-        <span class="card-sub">Арзандатуулар жана сунуштар</span>
-      </div>
-      <span class="card-arrow">→</span>
-    </a>
-
-    <p class="section-label">Байланыш</p>
-
-    <a href="#" class="link-card">
+    <a href="https://2gis.kg/bishkek/geo/70000001062848507" class="link-card" target="_blank" rel="noopener">
       <div class="card-icon">📍</div>
       <div class="card-body">
         <span class="card-label">Дарегибиз</span>
-        <span class="card-sub">Бишкек, Чүй пр. 123</span>
+        <span class="card-sub">Жибек-Жолу пр. 327/2, Бишкек</span>
       </div>
       <span class="card-arrow">→</span>
     </a>
 
-    <a href="tel:+996700000000" class="link-card">
+    <a href="tel:+996555809060" class="link-card">
       <div class="card-icon">📞</div>
       <div class="card-body">
         <span class="card-label">Телефон</span>
-        <span class="card-sub">+996 700 000 000</span>
+        <span class="card-sub">+996 555 809 060</span>
       </div>
       <span class="card-arrow">→</span>
     </a>
 
-    <a href="https://wa.me/996700000000" class="link-card">
-      <div class="card-icon">💬</div>
+    <a href="https://wa.me/996555809060" class="link-card" target="_blank" rel="noopener">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="#25D366" width="24" height="24">
+          <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9s-.5-.1-.7.1-.8.9-1 1.1-.4.2-.7 0c-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2 0-.4-.1-.5L9 7.2c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6s-.4-.3-.7-.4z"/>
+          <path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5zm-8.5 18.4c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.5 15.8 2 13.9 2 12 2 6.5 6.5 2 12 2c2.7 0 5.2 1 7.1 2.9C21 6.8 22 9.3 22 12c0 5.5-4.5 9.9-10 9.9z"/>
+        </svg>
+      </div>
       <div class="card-body">
         <span class="card-label">WhatsApp</span>
-        <span class="card-sub">+996 700 000 000</span>
+        <span class="card-sub">+996 555 809 060</span>
       </div>
       <span class="card-arrow">→</span>
     </a>
 
-    <a href="https://instagram.com/kitep_dukon" class="link-card">
-      <div class="card-icon">📸</div>
+    <a href="https://www.instagram.com/nurs_kitep" class="link-card" target="_blank" rel="noopener">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+          <defs>
+            <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f09433"/>
+              <stop offset="25%" stop-color="#e6683c"/>
+              <stop offset="50%" stop-color="#dc2743"/>
+              <stop offset="75%" stop-color="#cc2366"/>
+              <stop offset="100%" stop-color="#bc1888"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig)" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4" stroke="url(#ig)" stroke-width="1.8"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="url(#ig)"/>
+        </svg>
+      </div>
       <div class="card-body">
         <span class="card-label">Instagram</span>
-        <span class="card-sub">@kitep_dukon</span>
+        <span class="card-sub">@nurs_kitep</span>
       </div>
       <span class="card-arrow">→</span>
     </a>
 
-  </div>
-
-  <!-- SOCIAL ROW -->
-  <div class="social-row">
-    <a href="https://instagram.com/kitep_dukon" class="social-btn">
-      <!-- Instagram -->
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
-      </svg>
-      Instagram
-    </a>
-    <a href="https://t.me/kitep_dukon" class="social-btn">
-      <!-- Telegram -->
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M21.8 3.1L2.3 10.7c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.2.7.4.9 1 .9s.8-.2 1.1-.5l2.6-2.5 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.5c.3-1.3-.5-1.9-1.9-1.8z"/>
-      </svg>
-      Telegram
-    </a>
-    <a href="https://wa.me/996700000000" class="social-btn">
-      <!-- WhatsApp -->
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9s-.5-.1-.7.1-.8.9-1 1.1-.4.2-.7 0c-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2 0-.4-.1-.5L9 7.2c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6s-.4-.3-.7-.4z"/>
-        <path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5zm-8.5 18.4c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.5 15.8 2 13.9 2 12 2 6.5 6.5 2 12 2c2.7 0 5.2 1 7.1 2.9C21 6.8 22 9.3 22 12c0 5.5-4.5 9.9-10 9.9z"/>
-      </svg>
-      WhatsApp
-    </a>
   </div>
 
 </div>
 
-<footer class="footer">© 2025 КитепДүкөн · Бишкек</footer>
+<footer class="footer">© 2026 <b>NURS</b> китеп дүкөнү · Бишкек</footer>
 
 </body>
 <script>
