@@ -94,16 +94,20 @@
       background: var(--surface);
       box-shadow: 0 0 0 8px #c9a84c0f, 0 8px 32px #00000060;
       position: relative;
+      overflow: hidden;
     }
 
     .logo-wrap svg { width: 44px; height: 44px; }
-    .logo-wrap img {
-      margin-bottom: 10px
-      width: 120%;    /* Контейнердин ичин толук ээлейт */
+    .logo-wrap img { width: 120%; height: 120%; object-fit: cover; }
+
+    .logo-wrap .nurs-logo {
+      width: 120%;
       height: 120%;
-            margin: 0 auto 20px;
-      object-fit: cover; /* Сүрөт чоюлбайт, борборго туураланат */
+      margin-bottom: 20px
     }
+    /* NURS жазуусу — күн режиминде кара, түн режиминде ак */
+    .nurs-logo .nurs-text { fill: #ffffff; }
+    :root.light .nurs-logo .nurs-text { fill: #231f20; }
 
     .shop-name {
       font-family: 'Playfair Display', serif;
@@ -355,10 +359,69 @@
   <!-- HEADER -->
   <header class="header">
     <div class="logo-wrap">
-      <img src="nurs.png" alt="NURS логотипи" />
+      <svg class="nurs-logo" viewBox="220 210 680 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-395.03371,-246.3398)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath5">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-483.64891,-206.74501)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath7">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-603.66062,-201.1679)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath9">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-471.77291,-338.54191)"/>
+          </clipPath>
+          <linearGradient x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(-258.02063,-181.46504,-181.46504,258.02063,428.05859,310.62292)"
+            spreadMethod="pad" id="linearGradient10">
+            <stop style="stop-opacity:1;stop-color:#ed1c24" offset="0"/>
+            <stop style="stop-opacity:1;stop-color:#e21c27" offset="1"/>
+          </linearGradient>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath12">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-539.51321,-385.59561)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath14">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-502.38532,-412.04191)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-461.24561,-427.60931)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath18">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-424.32281,-431.68061)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath20">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-396.01511,-378.78701)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath22">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-373.93991,-364.78901)"/>
+          </clipPath>
+          <clipPath clipPathUnits="userSpaceOnUse" id="clipPath24">
+            <path d="M 0,595.276 H 841.89 V 0 H 0 Z" transform="translate(-360.20651,-345.87881)"/>
+          </clipPath>
+        </defs>
+        <g>
+          <!-- NURS тексти — .nurs-text class менен башкарылат -->
+          <path class="nurs-text" d="M 0,0 V -50.174 L -38.206,0 h -16.523 v -81.492 h 17.702 v 51.797 L 2.436,-81.492 h 15.266 l 0,81.492 z" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,386.2468,465.24827)"/>
+          <path class="nurs-text" d="m 0,0 v -46.69 c 0,-12.911 -6.626,-19.562 -17.571,-19.562 -10.947,0 -17.572,6.861 -17.572,20.163 V 0 H -53.08 v -46.56 c 0,-23.987 13.354,-36.215 35.273,-36.215 21.892,0 35.744,12.097 35.744,36.792 l 0,45.983 z" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,526.7116,465.24827)" clip-path="url(#clipPath3)"/>
+          <path class="nurs-text" d="m 0,0 h -18.174 v 23.437 h 17.807 c 8.721,0 14.089,-3.98 14.089,-11.678 C 13.722,4.662 8.72,0 0,0 m 14.428,-12.805 c 10.37,3.85 17.467,12.125 17.467,25.27 0,7.934 -2.436,14.324 -6.993,18.881 -5.341,5.342 -13.381,8.249 -23.751,8.249 h -37.262 v -81.492 h 17.937 v 26.055 H -4.321 L 13.381,-41.897 H 34.33 Z" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,644.8652,518.04133)" clip-path="url(#clipPath5)"/>
+          <path class="nurs-text" d="m 0,0 c -4.059,6.128 -11.783,9.637 -22.599,12.465 -14.062,3.613 -17.545,5.342 -17.545,10.71 0,4.19 3.588,7.332 10.449,7.332 6.887,0 13.983,-3.037 21.211,-8.039 L 0.838,35.98 c -8.275,6.625 -18.408,10.371 -30.297,10.371 -16.629,0 -28.518,-9.768 -28.518,-24.564 0,-16.444 10.58,-20.975 27.025,-25.165 13.617,-3.483 16.392,-5.813 16.392,-10.37 0,-5.001 -4.399,-7.908 -11.757,-7.908 -9.296,0 -16.996,3.849 -24.328,9.898 l -10.605,-12.7 c 9.794,-8.72 22.259,-13.041 34.593,-13.041 1.283,0 2.54,0.053 3.77,0.157 5.264,0.393 9.951,1.702 13.853,3.823 7.201,3.85 11.731,10.475 12.256,19.509 0.025,0.576 0.051,1.179 0.051,1.781 C 3.273,-7.228 2.147,-3.247 0,0" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,804.8808,525.47747)" clip-path="url(#clipPath7)"/>
+          <!-- Кызгылт сары / кызыл элементтер — өзгөрбөйт -->
+          <path d="m 0,0 c -0.629,-0.471 -1.388,-0.785 -2.174,-1.1 -8.143,-3.823 -16.889,-8.065 -25.557,-13.433 -5.395,-3.353 -10.737,-7.123 -15.949,-11.522 v -0.026 c -0.078,-0.053 -0.156,-0.106 -0.235,-0.184 -2.487,-2.173 -4.845,-4.53 -7.044,-7.017 -2.278,2.434 -4.609,4.923 -7.201,7.07 -0.053,0.025 -0.079,0.078 -0.131,0.105 -5.054,4.399 -10.397,8.221 -15.765,11.547 -8.38,5.211 -16.838,9.271 -24.562,12.702 -0.786,0.444 -1.729,0.916 -2.803,1.545 2.803,4.765 6.259,9.138 10.266,12.883 5.29,5.054 11.496,9.113 18.383,11.889 6.755,2.749 14.14,4.268 21.918,4.294 h 0.209 c 7.699,0 15.031,-1.467 21.735,-4.138 6.939,-2.749 13.198,-6.756 18.54,-11.809 C -6.337,9.087 -2.854,4.767 0,0" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,629.03053,342.31213)" clip-path="url(#clipPath9)"/>
+          <path d="m 477.246,328.906 c -2.802,-1.205 -5.395,-2.619 -8.013,-4.007 v 0 c -12.806,-5.813 -26.03,-12.438 -37.656,-22.651 v 0 c -4.007,-3.404 -7.595,-7.412 -10.397,-12.02 v 0 c -3.01,4.608 -6.625,8.616 -10.631,12.02 v 0 c -11.602,10.213 -24.825,16.838 -37.656,22.651 v 0 c -2.592,1.388 -5.212,2.802 -8.013,4.007 v 0 l -86.258,38.154 c -6.704,-5.814 -12.857,-12.046 -18.489,-18.645 v 0 c -0.968,-1.126 -1.91,-2.279 -2.854,-3.457 v 0 L 358.281,314.66 c 0,0 5.996,-1.598 14.402,-5.395 v 0 c 0.419,0 0.603,0 1.021,-0.209 v 0 c 0.158,-0.079 0.34,-0.157 0.524,-0.235 v 0 c -0.209,0.052 -0.419,0.104 -0.628,0.156 v 0 c -0.393,0.184 -0.786,0.184 -0.995,0.184 v 0 c -4.609,1.021 -9.428,2.017 -13.827,2.801 v 0 c -0.393,0.21 -0.601,0.21 -0.812,0.21 v 0 c -7.227,1.152 -88.353,19.745 -107.233,24.117 v 0 c -5.028,-7.2 -9.428,-14.768 -13.12,-22.624 v 0 c 0,-0.027 -0.026,-0.027 -0.026,-0.053 v 0 -0.025 c -0.261,-0.55 -0.523,-1.1 -0.733,-1.65 v 0 c -0.052,-0.105 -0.105,-0.235 -0.158,-0.341 v 0 l 94.849,-8.222 c 2.827,-0.184 10.866,-0.76 21.079,-2.331 v 0 H 232.402 c -2.514,-6.965 -4.451,-14.114 -5.813,-21.42 v 0 h 158.113 c 5.029,-5.002 13.225,-11.024 28.858,-12.413 v 0 c 0.392,-0.209 1.205,-0.209 1.597,-0.209 v 0 h 0.996 c 0.603,0 1.021,-0.21 1.622,0 v 0 c 0.577,-0.21 1.389,-0.21 1.991,-0.21 v 0 h 0.394 c 0.419,0 1.02,0 1.204,0.21 v 0 h 1.204 c 0.393,0 0.995,0 1.597,0.209 v 0 h 2.619 c 0.603,0 1.205,0 1.597,0.184 v 0 c 13.015,2.016 22.233,8.013 27.235,12.229 v 0 l 159.685,1.151 v 0.027 c -1.362,6.888 -3.222,13.67 -5.578,20.242 v 0 H 489.527 c 10.186,1.571 18.252,2.147 21.08,2.331 v 0 l 94.821,8.222 c -3.406,8.271 -8.141,16.492 -14.061,24.667 v 0 C 572.408,331.89 491.413,313.324 484.159,312.172 v 0 c -0.393,0 -0.393,0 -0.785,-0.21 v 0 c -4.61,-0.784 -9.218,-1.78 -13.827,-2.801 v 0 c -0.21,0 -0.602,0 -0.994,-0.184 v 0 c -0.368,-0.104 -0.734,-0.183 -1.075,-0.262 v 0 c 0.236,0.106 0.525,0.236 0.76,0.341 v 0 h 0.392 c 8.825,3.824 15.241,5.604 15.241,5.604 v 0 l 101,30.298 c -6.545,8.118 -13.904,15.685 -21.996,22.651 v 0 z" transform="matrix(1.3333333,0,0,-1.3333333,0,793.70133)" style="fill:url(#linearGradient10);stroke:none"/>
+          <path d="M 0,0 -55.931,-39.717 -6.18,4.353 C -5.63,3.977 -5.08,3.632 -4.557,3.257 -3.012,2.191 -1.493,1.127 0,0" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,719.35093,279.57387)" clip-path="url(#clipPath12)"/>
+          <path d="M 0,0 -34.305,-47.003 -6.6,2.661 C -5.919,2.442 -5.264,2.16 -4.609,1.91 -3.064,1.283 -1.52,0.657 0,0" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,669.84707,244.31213)" clip-path="url(#clipPath14)"/>
+          <path d="M 0,0 -15.345,-48.666 -6.599,1.252 C -5.761,1.127 -4.923,0.971 -4.085,0.814 -2.697,0.563 -1.361,0.312 0,0" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,614.99413,223.5556)" clip-path="url(#clipPath16)"/>
+          <path d="M 0,0 -3.378,-47.945 -6.625,0 c 1.1,0.031 2.199,0.031 3.3,0.031 h 0.078 c 1.074,0 2.174,0 3.247,-0.031" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,565.76373,218.1272)" clip-path="url(#clipPath18)"/>
+          <path d="m 0,0 -15.24,48.791 c 1.361,0.313 2.697,0.563 4.085,0.814 0.838,0.157 1.676,0.313 2.513,0.438 z" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,528.02013,288.652)" clip-path="url(#clipPath20)"/>
+          <path d="m 0,0 -34.187,48.584 c 1.52,0.657 3.039,1.283 4.583,1.91 0.655,0.25 1.335,0.532 1.991,0.751 z" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,498.58653,307.316)" clip-path="url(#clipPath22)"/>
+          <path d="m 0,0 -58.776,41.004 c 1.518,1.127 3.037,2.192 4.582,3.257 0.549,0.376 1.099,0.751 1.649,1.095 z" style="fill:#f68712;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,480.27533,332.5296)" clip-path="url(#clipPath24)"/>
+        </g>
+      </svg>
     </div>
     <h1 class="shop-name">NURS</h1>
-    <p class="tagline">Китеп дүкөнүнө кош келиңиз</p>
+    <p class="tagline">Китептер дүйнөсүнө кош келиңиз</p>
     <div class="divider">
       <span></span><i>✦</i><span></span>
     </div>
@@ -367,7 +430,7 @@
   <!-- MAIN LINKS -->
   <div class="links">
 
-    <p class="section-label">Веб сайтыбыз</p>
+    <p class="section-label">Дүкөн</p>
 
     <a href="https://www.nurs.kg/" class="link-card featured" target="_blank" rel="noopener">
       <div class="card-icon">🛒</div>
@@ -379,7 +442,7 @@
       <span class="card-arrow">→</span>
     </a>
 
-    <p class="section-label">Байланышуу</p>
+    <p class="section-label">Байланыш</p>
 
     <a href="https://2gis.kg/bishkek/geo/70000001062848507" class="link-card" target="_blank" rel="noopener">
       <div class="card-icon">📍</div>
@@ -441,7 +504,7 @@
 
 </div>
 
-<footer class="footer">© 2026 <b>NURS</b> китеп дүкөнү · Бишкек</footer>
+<footer class="footer">© 2025 NURS Китеп дүкөнү · Бишкек</footer>
 
 </body>
 <script>
